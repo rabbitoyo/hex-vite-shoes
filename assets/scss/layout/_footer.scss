@@ -1,4 +1,31 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+.footer {
+    padding: 4rem 0;
+    background: $neutral-100;
+
+    .copyright {
+        border-top: 1px solid $neutral-300;
+        padding-top: calc(2rem - 1px);
+
+        p {
+            color: $neutral-600;
+            font-size: .875rem;
+            font-weight: initial;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .d-flex {
+            flex-wrap: wrap;
+        }
+
+        .navbar-nav {
+            padding: 0 .75rem;
+            width: 100%;
+
+            .nav-item {
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+    }
 }

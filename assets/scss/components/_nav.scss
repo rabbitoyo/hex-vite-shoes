@@ -1,0 +1,14 @@
+.navbar-nav .nav-item {
+    &:first-child {
+        margin-right: 2.5rem;
+    }
+
+    .nav-link {
+        padding: .75rem 0;
+        transition: .3s;
+
+        &:hover {
+            color: $neutral-600;
+        }
+    }     
+}

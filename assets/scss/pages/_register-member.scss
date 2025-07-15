@@ -1,0 +1,31 @@
+.register-member {
+    background: $primary-200;
+
+    .h4 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        color: $neutral-0;
+        background: $neutral-900;
+
+        &:hover {
+            background: $neutral-700;
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding: 1.5rem .75rem;
+
+        .h4 {
+            margin-bottom: 1.5rem;
+            margin-right: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .d-flex {
+            flex-wrap: wrap;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    //outline: auto;
+}
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+button {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.h2, .h3, .h4, .h5, .h6, p, span, li, a, .btn {
+    color: $neutral-900;
+}
+
+.h2, .h3, .h4, .h5, .h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p, span, li, a, .btn {
+    font-weight: 500;
+    text-decoration: none;
+}

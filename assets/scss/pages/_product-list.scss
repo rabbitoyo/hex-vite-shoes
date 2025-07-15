@@ -1,0 +1,109 @@
+.product {
+    padding: 2rem 0;
+
+    .h3 {
+        padding: 7px 0;
+        font-size: 1.75rem;
+    }
+
+    .nav {
+        position: sticky;
+        top: 5rem;
+    }
+
+    .nav .nav-item {
+        margin-bottom: 1rem;
+        
+        .nav-link {
+            padding: .75rem 0;
+            transition: .3s;
+    
+            &:hover, &.active {
+                color: $primary-400;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: .75rem;
+
+            .nav-item {
+                margin: 0 .5rem;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                @media (max-width: 768px) {
+                    margin: 0;
+                    width: calc(100% /2);
+                }
+            }
+        }
+    }
+
+    .page-item {
+        margin: 0 .25rem;
+        max-width: 40px;
+        width: 100%;
+
+        &:first-child {
+            margin-right: .5rem;
+        }
+
+        &:last-child {
+            margin-left: .5rem;
+        }
+
+        .arrow {
+            padding: .625rem;
+            font-family: initial;
+            font-size: 1.25rem;
+            line-height: 0;
+            letter-spacing: 0;
+            text-align: center;
+            transition: .3s;
+
+            &.disabled, &.disabled:hover {
+                color: $neutral-900;
+                cursor: default;
+                opacity: .4;
+                pointer-events: none;
+            }
+
+            &:hover {
+                color: $primary-400;
+            }
+        }
+
+        .page-link {
+            padding: .5rem 0;
+            text-align: center;
+
+            &:hover {
+                background: $neutral-100;
+            }
+
+            &.active, &:active {
+                background: $primary-300;
+            }
+        }
+    }
+}
+
+.product-item {
+    .product-img {
+        transition: .5s;
+    }
+
+    &:hover .product-img {
+        opacity: .75;
+    }
+
+    .product-body {
+        margin-top: .75rem;
+    }
+}

@@ -1,5 +1,20 @@
+// base
+@import './base/variables.scss';
+@import './base/reset.scss';
+@import './base/base.scss';
+
+// components
+@import './components/breadcrumb.scss';
+@import './components/button.scss';
+@import './components/nav.scss';
+
+// layout
+@import './layout/grid.scss';
+@import './layout/utilities.scss';
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
-
-@import './pages/index.scss';
+// pages
+@import './pages/register-member.scss';
+@import './pages/product-list.scss';
+@import './pages/product-detail.scss';

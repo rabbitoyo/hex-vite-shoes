@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URBNSTEP - 商品列表</title>
+    <link rel="icon" href="../assets/images/favicon.ico">
+</head>
+<body>
+
+	<%- include('./layout/header'); -%>
+
+	<main>
+		<section class="product">
+			<div class="container">
+				<nav>
+					<ol class="breadcrumb d-flex mb-4">
+						<li class="breadcrumb-item">
+							<a href="index.html">首頁</a>
+						</li>
+						<li class="breadcrumb-item">所有商品</li>
+					</ol>
+				</nav>
+				<h3 class="h3 mb-4">所有商品</h3>
+				<div class="row">
+					<div class="col-2">
+						<ul class="nav pr-4">
+							<li class="nav-item">
+								<a class="nav-link active" href="#">所有商品</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">慢跑鞋</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">滑板鞋</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">厚底鞋</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">限定 / 聯名企劃</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-10">
+						<ul class="row">
+							<li class="col-4 col-sm-6 mb-5">
+								<a class="product-item" href="product-detail.html">
+									<img class="product-img" src="../assets/images/product.png" alt="PLATFORM 404">
+									<div class="product-body">
+										<h6 class="h6 mb-1">PLATFORM 404</h6>
+										<p class="product-price">NT$2,600</p>
+									</div>
+								</a>
+							</li>
+							<li class="col-4 col-sm-6 mb-5">
+								<a class="product-item" href="#">
+									<img class="product-img" src="../assets/images/product-1.png" alt="PLATFORM 404">
+									<div class="product-body">
+										<h6 class="h6 mb-1">PLATFORM 404</h6>
+										<p class="product-price">NT$2,600</p>
+									</div>
+								</a>
+							</li>
+							<li class="col-4 col-sm-6 mb-5">
+								<a class="product-item" href="#">
+									<img class="product-img" src="../assets/images/product-2.png" alt="VM001">
+									<div class="product-body">
+										<h6 class="h6 mb-1">VM001</h6>
+										<p class="product-price">NT$2,600</p>
+									</div>
+								</a>
+							</li>
+							<li class="col-4 col-sm-6 mb-5">
+								<a class="product-item" href="#">
+									<img class="product-img" src="../assets/images/product-3.png" alt="Melty Kiss">
+									<div class="product-body">
+										<h6 class="h6 mb-1">Melty Kiss</h6>
+										<p class="product-price">NT$4,000</p>
+									</div>
+								</a>
+							</li>
+							<li class="col-4 col-sm-6 mb-5">
+								<a class="product-item" href="#">
+									<img class="product-img" src="../assets/images/product-4.png" alt="BOOMBLOK">
+									<div class="product-body">
+										<h6 class="h6 mb-1">BOOMBLOK</h6>
+										<p class="product-price">NT$3,200</p>
+									</div>
+								</a>
+							</li>
+							<li class="col-4 col-sm-6 mb-5">
+								<a class="product-item" href="#">
+									<img class="product-img" src="../assets/images/product-5.png" alt="BOOMBLOK">
+									<div class="product-body">
+										<h6 class="h6 mb-1">BOOMBLOK</h6>
+										<p class="product-price">NT$3,200</p>
+									</div>
+								</a>
+							</li>
+							<li class="col-4 col-sm-6 mb-5">
+								<a class="product-item" href="#">
+									<img class="product-img" src="../assets/images/product-6.png" alt="R:UNER">
+									<div class="product-body">
+										<h6 class="h6 mb-1">R:UNER</h6>
+										<p class="product-price">NT$4,000</p>
+									</div>
+								</a>
+							</li>
+							<li class="col-4 col-sm-6 mb-5">
+								<a class="product-item" href="#">
+									<img class="product-img" src="../assets/images/product-7.png" alt="Sugar Snap">
+									<div class="product-body">
+										<h6 class="h6 mb-1">Sugar Snap</h6>
+										<p class="product-price">NT$4,000</p>
+									</div>
+								</a>
+							</li>
+							<li class="col-4 col-sm-6 mb-5">
+								<a class="product-item" href="#">
+									<img class="product-img" src="../assets/images/product-8.png" alt="Neofoam">
+									<div class="product-body">
+										<h6 class="h6 mb-1">Neofoam</h6>
+										<p class="product-price">NT$4,000</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="pagination justify-content-center align-items-center">
+							<li class="page-item">
+								<a class="arrow disabled" href="#">
+									<i class="bi bi-chevron-left"></i>
+								</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link active" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">3</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">...</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">10</a>
+							</li>
+							<li class="page-item">
+								<a class="arrow" href="#">
+									<i class="bi bi-chevron-right"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<%- include('./layout/register-member'); -%>
+	</main>
+
+	<%- include('./layout/footer'); -%>
+
+	<script type="module" src="../main.js"></script>
+</body>
+</html>

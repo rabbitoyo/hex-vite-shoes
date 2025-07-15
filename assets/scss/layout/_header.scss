@@ -1,4 +1,62 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.header {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, .85);
+    backdrop-filter: blur(5px);
+    z-index: 5;
+
+    .member {
+        padding: .75rem;
+        font-family: initial;
+        font-size: 1.5rem;
+        line-height: 0;
+        letter-spacing: 0;
+        text-align: center;
+
+        &:hover {
+            color: $primary-400;
+        }
+    }
+
+    @media (max-width: 576px) {
+        padding: 0;
+
+        .container {
+            padding: 0
+        }
+        
+        .d-flex {
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            margin: .75rem;
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        .navbar-nav {
+            width: 100%;
+
+            .nav-item {
+                margin: 0;
+                width: calc(100% /2);
+                text-align: center;
+                background: $primary-200;
+
+                &:last-child {
+                    background: $primary-100;
+                }
+            }
+        }
+
+        .member {
+            position: absolute;
+            right: .75rem;
+            top: .75rem;
+        }
+    }
 }
