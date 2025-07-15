@@ -6,7 +6,7 @@
 // components
 @import './components/breadcrumb.scss';
 @import './components/button.scss';
-@import './components/nav.scss';
+@import './components/navbar.scss';
 
 // layout
 @import './layout/grid.scss';
@@ -16,5 +16,6 @@
 
 // pages
 @import './pages/register-member.scss';
+@import './pages/index.scss';
 @import './pages/product-list.scss';
 @import './pages/product-detail.scss';
