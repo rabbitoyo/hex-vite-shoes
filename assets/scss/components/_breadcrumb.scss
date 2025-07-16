@@ -1,25 +1,27 @@
-.breadcrumb .breadcrumb-item {
-    display: flex;
-    color: $neutral-900;
+.breadcrumb { 
+    .breadcrumb-item {
+        display: flex;
+        color: map-get($neutral, 900);
 
-    a {
-        margin-right: .75rem;
-        color: $neutral-600;
+        a {
+            margin-right: map-get($spacings, 8);
+            color: map-get($neutral, 600);
 
-        &:hover {
-            color: $primary-400;
+            &:hover {
+                color: map-get($primary, 400);
+            }
         }
-    }
 
-    &::before {
-        content: "/";
-        margin-right: .75rem;
-        color: $neutral-300;
-        font-weight: 700;
-        letter-spacing: 0;
-    }
+        &::before {
+            content: "/";
+            margin-right: map-get($spacings, 3);
+            color: map-get($neutral, 300);
+            font-weight: map-get($font-weights, bold);
+            letter-spacing: 0;
+        }
 
-    &:first-child:before {
-        display: none;
+        &:first-child:before {
+            display: none;
+        }
     }
 }

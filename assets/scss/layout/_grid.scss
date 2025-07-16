@@ -1,27 +1,26 @@
 .container {
     margin: 0 auto;
-    padding: 0 .75rem;
     max-width: 1320px;
-
-    @media (max-width: 1400px) {
-        max-width: 1140px;
-    }
-
-    @media (max-width: 1200px) {
-        max-width: 960px;
-    }
-
-    @media (max-width: 992px) {
-        max-width: 720px;
-    }
-
-    @media (max-width: 768px) {
-        max-width: 540px;
-    }
+    @include px(3);
+    @include container-maxwidth;
 }
 
-.d-flex, .row, .pagination {
+.d-flex, .row {
     display: flex;
+}
+
+.row {
+    flex-wrap: wrap;
+    @include row-gutter-negative(3);
+}
+
+.row>* {
+    max-width: 100%;
+    @include px(3);
+}
+
+.row.g-1>* {
+    padding: 0 .25rem;
 }
 
 .justify-content-center {
@@ -32,74 +31,11 @@
     align-items: center;
 }
 
-.row {
-    flex-wrap: wrap;
-    margin: 0 -.75rem;
-}
-
-.row>* {
-    max-width: 100%;
-    padding: 0 .75rem;
-}
-
-.row.g-1>* {
-    padding: 0 .25rem;
-}
-
-.col-2 {
-    width: calc(100%/12 * 2);
-
-    @media (max-width: 1200px) {
-        width: 100%;
-    }
-}
-
-.col-3 {
-    width: calc(100%/12 * 3)
-}
-
-.col-4 {
-    width: calc(100%/3);
-}
-
-.col-5 {
-    width: calc(100%/12 * 5);
-
-    @media (max-width: 1200px) {
-        width: 100%;
-    }
-}
-
-.col-6 {
-    width: calc(100%/2);
-
-    @media (max-width: 1200px) {
-        width: calc(100%/12 * 3);
-    }
-
-    @media (max-width: 768px) {
-        width: calc(100%/2);
-    }
-}
-
-@media (max-width: 768px) {
-    .col-sm-6 {
-        width: calc(100% / 2);
-    }
-}
-
-.col-7 {
-    width: calc(100%/12 * 7);
-
-    @media (max-width: 1200px) {
-        width: 100%;
-    }
-}
-
-.col-10 {
-    width: calc(100%/12 * 10);
-
-    @media (max-width: 1200px) {
-        width: 100%;
-    }
+// -----------------------------
+// Col-* Grid
+// -----------------------------
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc(100% / 12 * #{$i});
+  }
 }

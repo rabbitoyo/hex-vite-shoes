@@ -1,0 +1,72 @@
+// -----------------------------
+// Media Query Helper
+// -----------------------------
+@mixin mq($key) {
+    @media (max-width: map-get($breakpoints, $key)) {
+        @content;
+    }
+}
+
+// -----------------------------
+// Container Helper
+// -----------------------------
+@mixin container-maxwidth {
+	@include mq(xxl) {
+		max-width: 1140px;
+	}
+	@include mq(xl) {
+		max-width: 960px;
+	}
+	@include mq(lg) {
+		max-width: 720px;
+	}
+	@include mq(md) {
+		max-width: 540px;
+	}
+}
+
+// -----------------------------
+// Spacing  Helper
+// -----------------------------
+@mixin space($property, $args...) {
+	$len: length($args);
+
+	@if not ($property == margin or $property == padding) {
+		@error "[space mixin] $property 必須是 'margin' 或 'padding'";
+	}
+
+	@if $len == 1 {
+		$v1: map-get($spacings, nth($args, 1));
+		#{$property}: $v1;
+	} 
+	@else if $len == 2 {
+		$v1: map-get($spacings, nth($args, 1));
+		$v2: map-get($spacings, nth($args, 2));
+		#{$property}: $v1 $v2;
+	} 
+	@else if $len == 3 {
+		$v1: map-get($spacings, nth($args, 1));
+		$v2: map-get($spacings, nth($args, 2));
+		$v3: map-get($spacings, nth($args, 3));
+		#{$property}: $v1 $v2 $v3;
+	} 
+	@else if $len == 4 {
+		$v1: map-get($spacings, nth($args, 1));
+		$v2: map-get($spacings, nth($args, 2));
+		$v3: map-get($spacings, nth($args, 3));
+		$v4: map-get($spacings, nth($args, 4));
+		#{$property}: $v1 $v2 $v3 $v4;
+	} 
+	@else {
+		@error "[space mixin] 傳入的 spacing 數量需為 1～4，傳了 #{$len} 個";
+	}
+}
+@mixin px($key) {
+	padding-left: map-get($spacings, $key);
+	padding-right: map-get($spacings, $key);
+}
+@mixin row-gutter-negative($key) {
+	$val: map-get($spacings, $key);
+	margin-left: -$val;
+	margin-right: -$val;
+}

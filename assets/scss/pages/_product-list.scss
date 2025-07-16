@@ -19,7 +19,7 @@
             transition: .3s;
     
             &:hover, &.active {
-                color: $primary-400;
+                color: map-get($primary, 400);
             }
         }
     }
@@ -41,54 +41,6 @@
                     margin: 0;
                     width: calc(100% /2);
                 }
-            }
-        }
-    }
-
-    .page-item {
-        margin: 0 .25rem;
-        max-width: 40px;
-        width: 100%;
-
-        &:first-child {
-            margin-right: .5rem;
-        }
-
-        &:last-child {
-            margin-left: .5rem;
-        }
-
-        .arrow {
-            padding: .625rem;
-            font-family: initial;
-            font-size: 1.25rem;
-            line-height: 0;
-            letter-spacing: 0;
-            text-align: center;
-            transition: .3s;
-
-            &.disabled, &.disabled:hover {
-                color: $neutral-900;
-                cursor: default;
-                opacity: .4;
-                pointer-events: none;
-            }
-
-            &:hover {
-                color: $primary-400;
-            }
-        }
-
-        .page-link {
-            padding: .5rem 0;
-            text-align: center;
-
-            &:hover {
-                background: $neutral-100;
-            }
-
-            &.active, &:active {
-                background: $primary-300;
             }
         }
     }

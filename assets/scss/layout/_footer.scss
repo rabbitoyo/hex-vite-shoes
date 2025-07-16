@@ -1,13 +1,13 @@
 .footer {
     padding: 4rem 0;
-    background: $neutral-100;
+    background: map-get($neutral, 100);
 
     .copyright {
-        border-top: 1px solid $neutral-300;
+        border-top: 1px solid map-get($neutral, 300);
         padding-top: calc(2rem - 1px);
 
         p {
-            color: $neutral-600;
+            color: map-get($neutral, 600);
             font-size: .875rem;
             font-weight: initial;
         }

@@ -9,12 +9,12 @@
     }
 
     .h1 {
-        color: $neutral-0;
+        color: map-get($neutral, 0);
         font-size: 2.5rem; 
     }
 
     .h3 {
-        color: $neutral-0;
+        color: map-get($neutral, 0);
         font-size: 1.75rem;
     }
 
@@ -30,11 +30,11 @@
 
     .quote {
         border-radius: .75rem;
-        background: $primary-100;
+        background: map-get($primary, 100);
     }
 
     .container { 
-        border-bottom: 1px solid $neutral-300;
+        border-bottom: 1px solid map-get($neutral, 300);
 
         @media (max-width: 1200px) {
             padding-left: 2rem;
@@ -47,7 +47,7 @@
     }
 
     .h5 {
-        color: $primary-400;
+        color: map-get($primary, 400);
         font-size: 1.25rem;
     }
 
@@ -58,7 +58,7 @@
     }
 
     p {
-        color: $neutral-900;
+        color: map-get($neutral, 900);
         font-size: 1rem;
     }
 
@@ -71,12 +71,12 @@
     .brand-history {
 
         li {
-            color: $neutral-900;
+            color: map-get($neutral, 900);
 
             span {
                 margin-left: .5rem;
                 padding-left: .5rem;
-                border-left: 1px solid $neutral-900;
+                border-left: 1px solid map-get($neutral, 900);
             }
         }
 
@@ -85,9 +85,9 @@
     .brand-concept {
 
         li {
-            border-left: 3px solid $neutral-300;
+            border-left: 3px solid map-get($neutral, 300);
             padding-left: .5rem;
-            color: $neutral-900;
+            color: map-get($neutral, 900);
         }
 
     }
@@ -97,7 +97,7 @@
         a {
             display: block;
             padding: .5rem 0;
-            color: $primary-400;
+            color: map-get($primary, 400);
             font-size: 1rem;
             text-decoration: none;
             transition: .3s;
@@ -108,18 +108,18 @@
             }
 
             span {
-                border-bottom: 1px solid $primary-400;
+                border-bottom: 1px solid map-get($primary, 400);
                 margin-left: .25rem;
                 padding-bottom: .25rem;
             }
         }
 
         a:hover {
-            color: $neutral-900;
+            color: map-get($neutral, 900);
             transition: .3s;
             
             span {
-                border-bottom: 1px solid $neutral-900;
+                border-bottom: 1px solid map-get($neutral, 900);
             }
         }
 

@@ -1,0 +1,66 @@
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.ms-auto {
+    margin-left: auto;
+}
+.me-auto {
+    margin-right: auto;
+}
+
+// Spacing
+@each $i, $space in $spacings {
+    // margin
+    .m-#{$i}  { margin: $space; }
+    .mt-#{$i} { margin-top: $space; }
+    .me-#{$i} { margin-right: $space; }
+    .mb-#{$i} { margin-bottom: $space; }
+    .ms-#{$i} { margin-left: $space; }
+    .mx-#{$i} {
+        margin-left: $space;
+        margin-right: $space;
+    }
+    .my-#{$i} {
+        margin-top: $space;
+        margin-bottom: $space;
+    }
+
+    // padding
+    .p-#{$i}  { padding: $space; }
+    .pt-#{$i} { padding-top: $space; }
+    .pe-#{$i} { padding-right: $space; }
+    .pb-#{$i} { padding-bottom: $space; }
+    .ps-#{$i} { padding-left: $space; }
+    .px-#{$i} {
+        padding-left: $space;
+        padding-right: $space;
+    }
+    .py-#{$i} {
+        padding-top: $space;
+        padding-bottom: $space;
+    }
+}
+
+// text
+.text-center {
+    text-align: center;
+}
+.text-primary, .text-secondary, .text-muted, .text-highlight, .text-on-dark {
+    letter-spacing: map-get($letter-spacings, normal);
+}
+.text-primay {
+    color: map-get($neutral, 900);
+}
+.text-secondary {
+    color: map-get($neutral, 600);
+}
+.text-muted {
+    color: map-get($neutral, 500);
+}
+.text-highlight {
+    color: map-get($primary, 400);
+}
+.text-on-dark {
+    color: map-get($neutral, 0);
+}

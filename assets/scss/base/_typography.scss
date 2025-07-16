@@ -1,0 +1,58 @@
+// -----------------------------
+// Display Titles
+// -----------------------------
+.display-1, .display-2 {
+    font-weight: map-get($font-weights, bold);
+    line-height: map-get($line-heights, normal);
+}
+.display-1 {
+  font-size: 4rem;
+}
+.display-2 {
+  font-size: 3rem;
+}
+
+// -----------------------------
+// Headings
+// -----------------------------
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: map-get($font-weights, bold);
+    line-height: map-get($line-heights, normal);
+}
+.h1 { 
+    font-size: 2.5rem; 
+}
+.h2 { 
+    font-size: 2rem; 
+}
+.h3 { 
+    font-size: 1.75rem;
+}
+.h4 { 
+    font-size: 1.5rem; 
+}
+.h5 { 
+    font-size: 1.25rem;
+}
+.h6 { 
+    font-size: 1rem;
+}
+
+// -----------------------------
+// Labels & Paragraphs
+// -----------------------------
+.label-lg, .label-md, .label-sm, .label-xs {
+    font-weight: map-get($font-weights, medium);
+}
+.label-lg, .p-lg { 
+    font-size: 1.25rem; 
+}
+.label-md, .p-md { 
+    font-size: 1rem; 
+}
+.label-sm, .p-sm { 
+    font-size: .875rem; 
+}
+.label-xs, .p-xs { 
+    font-size: .75rem; 
+}

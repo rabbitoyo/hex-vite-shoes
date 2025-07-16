@@ -1,14 +1,22 @@
-.navbar-nav .nav-item {
-    &:first-child {
-        margin-right: 2.5rem;
-    }
-
-    .nav-link {
-        padding: .75rem 0;
-        transition: .3s;
-
-        &:hover {
-            color: $neutral-600;
+.navbar-nav {
+    display: flex;
+    
+    .nav-item {
+        &:first-child {
+            margin-right: map-get($spacings, 7);
         }
-    }     
+
+        .nav-link {
+            color: map-get($neutral, 900);
+            transition: .3s;
+
+            &:hover {
+                color: map-get($neutral, 600);
+
+                @include mq(md) {
+                    color: map-get($neutral, 900);
+                }
+            }
+        }   
+    }  
 }

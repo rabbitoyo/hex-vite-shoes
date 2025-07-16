@@ -1,16 +1,16 @@
 .register-member {
-    background: $primary-200;
+    background: map-get($primary, 200);
 
     .h4 {
         font-size: 1.5rem;
     }
 
     .btn {
-        color: $neutral-0;
-        background: $neutral-900;
+        color: map-get($neutral, 0);
+        background: map-get($neutral, 900);
 
         &:hover {
-            background: $neutral-700;
+            background: map-get($neutral, 700);
         }
     }
 
