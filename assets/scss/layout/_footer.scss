@@ -1,29 +1,32 @@
 .footer {
-    padding: 4rem 0;
+    @include space(padding, 10, 0);
     background: map-get($neutral, 100);
 
     .copyright {
         border-top: 1px solid map-get($neutral, 300);
-        padding-top: calc(2rem - 1px);
 
-        p {
+        .p-sm {
             color: map-get($neutral, 600);
-            font-size: .875rem;
-            font-weight: initial;
         }
     }
 
-    @media (max-width: 576px) {
+    @include mq(sm) {
+        @include space(padding, 6, 0);
+
         .d-flex {
             flex-wrap: wrap;
         }
 
-        .navbar-nav {
-            padding: 0 .75rem;
+        .nav {
             width: 100%;
+        }
+
+        .navbar-nav {
+            flex-wrap: wrap;
+            @include space(padding, 0, 3);
 
             .nav-item {
-                margin-right: 0;
+                margin-right: map-get($spacings, 0);
                 width: 100%;
             }
         }

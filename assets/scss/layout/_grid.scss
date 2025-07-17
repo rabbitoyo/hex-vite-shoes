@@ -20,7 +20,7 @@
 }
 
 .row.g-1>* {
-    padding: 0 .25rem;
+    @include space(padding, 0, 1);
 }
 
 .justify-content-center {
@@ -37,5 +37,13 @@
 @for $i from 1 through 12 {
   .col-#{$i} {
     width: calc(100% / 12 * #{$i});
+  }
+}
+
+@each $breakpoint in (sm, md, lg, xl) {
+  @include mq(#{$breakpoint}) {
+    .col-#{$breakpoint} {
+      width: 100%;
+    }
   }
 }

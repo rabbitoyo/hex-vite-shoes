@@ -17,10 +17,11 @@
 // layout
 @import './layout/grid.scss';
 @import './layout/header.scss';
+@import './layout/call-to-action.scss';
 @import './layout/footer.scss';
 
 // pages
-@import './pages/register-member.scss';
 @import './pages/index.scss';
+@import './pages/about.scss';
 @import './pages/product-list.scss';
 @import './pages/product-detail.scss';

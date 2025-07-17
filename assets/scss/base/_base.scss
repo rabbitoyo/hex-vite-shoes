@@ -3,18 +3,18 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
-    // outline: auto;
+    outline: auto;
 }
 
 body {
     font-family: "Noto Sans TC", sans-serif;
+    color: map-get($neutral, 900);
     line-height: map-get($line-heights, relaxed);
     letter-spacing: map-get($letter-spacings, wide);
 }
 
 a {
     display: block;
-    color: map-get($neutral, 900);
     text-decoration: none;
 }
 
