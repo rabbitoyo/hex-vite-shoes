@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URBNSTEP</title>
+    <link rel="icon" href="../assets/images/favicon.ico">
+</head>
+<body>
+	<%- include('./layout/header'); -%>
+
+	<main>
+		<section class="favorites py-10 py-sm-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-xxl-8 col-lg mx-auto">
+                        <div class="d-flex justify-content-center align-items-center mb-6 mb-sm-5">
+                            <i class="bi bi-check-lg check-icon p-2"></i>
+                            <h2 class="h3 h4-sm ms-4 ms-sm-2">我的收藏</h2>
+                        </div>
+                        <div class="open-time d-flex align-items-center mb-6 mb-sm-5 p-4 text-highlight">
+                            <i class="bi bi-truck truck-icon"></i>
+                            <p class="label-md ms-3">門市營業時間：<time>週一至週五 10:00 - 22:00</time></p>
+                        </div>
+                        <ul class="product-list">
+                            <li class="product-item mb-6 mb-sm-5">
+                                <a class="d-flex pb-6 text-primay" href="product-detail.html">
+                                    <div class="product-img">
+                                        <img src="../assets/images/product.png" alt="">
+                                    </div>
+                                    <div class="product-body ms-4">
+                                        <h3 class="h5 h6-sm mb-2">PLATFORM 404</h3>
+                                        <p class="p-md mb-2">尺寸<span class="label-md ms-3">38</span></p>
+                                        <p class="p-md mb-2">顏色<span class="label-md ms-3">Navy</span></p>
+                                        <p class="product-price h6">NT$2,600</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product-item mb-6 mb-sm-5">
+                                <a class="d-flex pb-6 text-primay" href="#">
+                                    <div class="product-img">
+                                        <img src="../assets/images/product-4.png" alt="">
+                                    </div>
+                                    <div class="product-body ms-4">
+                                        <h3 class="h5 h6-sm mb-2">BOOMLOK</h3>
+                                        <p class="p-md mb-2">尺寸<span class="label-md ms-3">38</span></p>
+                                        <p class="p-md mb-2">顏色<span class="label-md ms-3">White</span></p>
+                                        <p class="product-price h6">NT$3,200</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="product-item mb-6 mb-sm-5">
+                                <a class="d-flex pb-6 text-primay" href="#">
+                                    <div class="product-img">
+                                        <img src="../assets/images/product-3.png" alt="">
+                                    </div>
+                                    <div class="product-body ms-4">
+                                        <h3 class="h5 h6-sm mb-2">MELTY KISS</h3>
+                                        <p class="p-md mb-2">尺寸<span class="label-md ms-3">38</span></p>
+                                        <p class="p-md mb-2">顏色<span class="label-md ms-3">Violet</span></p>
+                                        <p class="product-price h6">NT$4,000</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button class="btn btn-neutral-fill label-md">立即預約門市試穿</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</main>
+	<%- include('./layout/footer'); -%>
+	
+	<script type="module" src="../main.js"></script>
+</body>
+</html>

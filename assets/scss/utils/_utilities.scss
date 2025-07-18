@@ -43,11 +43,22 @@
 @each $breakpoint, $value in $breakpoints {
     @include mq(#{$breakpoint}) {
         @each $i, $space in $spacings {
-            .m-#{$breakpoint}-#{$i}  { margin: $space; }
-            .mt-#{$breakpoint}-#{$i} { margin-top: $space; }
-            .me-#{$breakpoint}-#{$i} { margin-right: $space; }
-            .mb-#{$breakpoint}-#{$i} { margin-bottom: $space; }
-            .ms-#{$breakpoint}-#{$i} { margin-left: $space; }
+            // margin
+            .m-#{$breakpoint}-#{$i}  { 
+                margin: $space; 
+            }
+            .mt-#{$breakpoint}-#{$i} { 
+                margin-top: $space; 
+            }
+            .me-#{$breakpoint}-#{$i} { 
+                margin-right: $space; 
+            }
+            .mb-#{$breakpoint}-#{$i} { 
+                margin-bottom: $space; 
+            }
+            .ms-#{$breakpoint}-#{$i} { 
+                margin-left: $space; 
+            }
             .mx-#{$breakpoint}-#{$i} {
                 margin-left: $space;
                 margin-right: $space;
@@ -57,11 +68,22 @@
                 margin-bottom: $space;
             }
 
-            .p-#{$breakpoint}-#{$i}  { padding: $space; }
-            .pt-#{$breakpoint}-#{$i} { padding-top: $space; }
-            .pe-#{$breakpoint}-#{$i} { padding-right: $space; }
-            .pb-#{$breakpoint}-#{$i} { padding-bottom: $space; }
-            .ps-#{$breakpoint}-#{$i} { padding-left: $space; }
+            // padding
+            .p-#{$breakpoint}-#{$i}  { 
+                padding: $space; 
+            }
+            .pt-#{$breakpoint}-#{$i} { 
+                padding-top: $space; 
+            }
+            .pe-#{$breakpoint}-#{$i} { 
+                padding-right: $space; 
+            }
+            .pb-#{$breakpoint}-#{$i} { 
+                padding-bottom: $space; 
+            }
+            .ps-#{$breakpoint}-#{$i} { 
+                padding-left: $space; 
+            }
             .px-#{$breakpoint}-#{$i} {
                 padding-left: $space;
                 padding-right: $space;
@@ -73,8 +95,6 @@
         }
     }
 }
-
-
 
 // w-{breakpoint}-100
 @each $breakpoint, $size in $breakpoints {
@@ -88,6 +108,9 @@
 // text
 .text-center {
     text-align: center;
+}
+.text-right {
+    text-align: right;
 }
 .text-primay {
     color: map-get($neutral, 900);

@@ -40,6 +40,18 @@
 	}
 }
 
+// 各斷點版本，如 .col-md-6
+@each $breakpoint, $width in $breakpoints {
+  @for $i from 1 through 12 {
+    @include mq($breakpoint) {
+      .col-#{$breakpoint}-#{$i} {
+        width: calc(100% / 12 * #{$i});
+      }
+    }
+  }
+}
+
+// 各斷點版本，如 .col-md
 @each $breakpoint in (sm, md, lg, xl, xxl) {
 	@include mq(#{$breakpoint}) {
 		.col-#{$breakpoint} {

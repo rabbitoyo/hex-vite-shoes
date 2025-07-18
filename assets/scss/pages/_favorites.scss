@@ -1,0 +1,64 @@
+.favorites {
+    .check-icon, .truck-icon {
+        font-size: 1.5rem;
+    }
+
+    .check-icon {
+        border-radius: map-get($radius, rounded);
+        color: map-get($primary, 500);
+        font-size: 1.5rem;
+        background: map-get($primary, 300);
+    }
+
+    .open-time {
+        background: map-get($primary, 100);
+    }
+
+    .product-item {
+        border-bottom: 1px solid map-get($neutral, 300);
+    }
+
+    .product-img {
+        max-width: 120px;
+    }
+
+    .product-body {
+        width: 100%;
+
+        .p-md {
+            color: map-get($neutral, 600);
+
+            span {
+                color: map-get($neutral, 900);
+                font-family: "Montserrat", sans-serif;
+                letter-spacing: 0;
+            }
+        }
+
+        .product-price {
+            font-family: "Montserrat", sans-serif;
+            text-align: right;
+        }
+    }
+
+    @include mq(sm) {
+        .check-icon {
+            padding: .375rem;
+            font-size: 1.25rem;
+        }
+
+        time {
+            display: block;
+        }
+
+        .product-body {
+            .h6-sm {
+                font-family: "Montserrat", sans-serif;
+            }
+
+            .product-price {
+                text-align: left;
+            }
+        }
+    }
+}

@@ -31,14 +31,14 @@ http://localhost:5173/
 
 ```
 assets					# 靜態資源
-├── images				圖片
-└── scss				SCSS 樣式
-	├── base			基礎設定
-	├── components			元件
-	├── layout			Common Section
-	├── pages			頁面
-	├── untils			variables / mixin / for / each
-	└── vendors			外部套件
+├── images
+└── scss
+	├── base
+	├── components
+	├── layout
+	├── pages
+	├── untils
+	└── vendors
 layout					# ejs 模板管理
 pages					# 頁面
 ```
