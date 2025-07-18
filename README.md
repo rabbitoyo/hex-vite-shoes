@@ -28,7 +28,7 @@ assets					# 靜態資源
 ├── images				圖片
 └── scss				SCSS 樣式
 	├── base			基礎設定
-	├── components		元件
+	├── components			元件
 	├── layout			Common Section
 	├── pages			頁面
 	├── untils			variables / mixin / for / each
