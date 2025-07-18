@@ -5,17 +5,9 @@
     background-size: cover;
     z-index: 0;
 
-    .h1, .h3 {
-        color: map-get($neutral, 0);
-    }
-    
-    .h1 {
-        margin-bottom: map-get($spacings, 4);
-    }
-
     @include mq(sm) {
         padding: 87px 0;
-        background: url('../images/hero-sm.png') no-repeat center bottom rgba(0, 0, 0, 0.4);
+        background: url('../images/hero-sm.png') no-repeat center center rgba(0, 0, 0, 0.4);
         background-size: cover;
 
         &::before {
@@ -28,105 +20,54 @@
             background: rgba(0, 0, 0, 0.4);
             z-index: -1;
         }
-
-        .h1 {
-            margin-bottom: map-get($spacings, 2);
-        }
     }
 }
 
 .brand-about {
-    @include space(padding, 10, 0);
-
-    .h5 {
-        color: map-get($primary, 400);
-    }
 
     .quote {
         border-radius: map-get($radius, md);
-        margin-bottom: map-get($spacings, 8);
-        @include space(padding, 6);
         text-align: center;
         background: map-get($primary, 100);
     }
 
-    .brand-img {
-        margin-bottom: map-get($spacings, 5);
+    .brand-intro, .brand-history, .brand-concept, .brand-story {
+        border-bottom: 1px solid map-get($neutral, 300);
     }
 
-    .brand-history {
+    .brand-history ol {
+        list-style: inherit;
+    }
 
-        li {
-            color: map-get($neutral, 900);
+    .brand-concept li {
+        border-left: 3px solid map-get($neutral, 300);
+    }
 
-            span {
-                margin-left: .5rem;
-                padding-left: .5rem;
-                border-left: 1px solid map-get($neutral, 900);
-            }
+    .brand-story .link-story {
+        display: inline-block;
+        color: map-get($primary, 400);
+
+        &:hover, &:focus, &.active {
+            color: map-get($primary, 500);
         }
 
-    }
-
-    .brand-concept {
-
-        li {
-            border-left: 3px solid map-get($neutral, 300);
-            padding-left: .5rem;
-            color: map-get($neutral, 900);
+        i {
+            font-size: 1.25rem;
         }
 
-    }
-
-    .brand-story {
-
-        a {
-            padding: .5rem 0;
-            color: map-get($primary, 400);
-
-            &:hover {
-                color: map-get($neutral, 900);
-                transition: .3s;
-                
-                span {
-                    border-bottom: 1px solid map-get($neutral, 900);
-                }
-            }
-
-            i {
-                font-size: 1.25rem;
-                vertical-align: middle;
-            }
-
-            span {
-                border-bottom: 1px solid map-get($primary, 400);
-                margin-left: .25rem;
-                padding-bottom: .25rem;
-            }
+        span {
+            display: inline-block;
         }
     }
 
     @include mq(sm) {
-        @include space(padding, 6, 0);
-
-        .h4 {
-            font-size: 1.25rem;
-        }
-
         .quote {
-            margin-bottom: map-get($spacings, 6);
-            @include space(padding, 5);
             text-align: left;
         }
 
-        .brand-img {
-            margin-bottom: map-get($spacings, 4);
-        }
-
-        .brand-intro {
-            .h5 {
-                font-size: 1rem;
-            }
+        .brand-intro .h6-sm {
+            max-width: 340px;
+            line-height: 1.5;
         }
     }
 }

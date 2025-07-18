@@ -19,16 +19,14 @@
         color: map-get($primary, 500);
     }
 }
-
 .btn-neutral-fill {
     color: map-get($neutral, 0);
     background: map-get($neutral, 900);
 
     &:hover, &:focus, &.active {
-        background: map-get($primary, 700);
+        background: map-get($neutral, 700);
     }
 }
-
 .btn-neutral-outlined {
     border: 1px solid map-get($neutral, 900);
     color: map-get($neutral, 900);

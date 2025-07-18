@@ -2,48 +2,50 @@
 // Display Titles
 // -----------------------------
 .display-1, .display-2 {
-    font-weight: map-get($font-weights, bold);
-    line-height: map-get($line-heights, normal);
+	font-weight: map-get($font-weights, bold);
+	line-height: map-get($line-heights, normal);
 }
 .display-1 {
-  font-size: 4rem;
+	font-size: 4rem;
 }
 .display-2 {
-  font-size: 3rem;
+	font-size: 3rem;
 }
 
 // -----------------------------
 // Headings
 // -----------------------------
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-weight: map-get($font-weights, bold);
-  line-height: map-get($line-heights, normal);
+	font-weight: map-get($font-weights, bold);
+	line-height: map-get($line-heights, normal);
 }
 
 @each $tag in (h1, h2, h3, h4, h5, h6) {
-  .#{$tag} {
-    font-size: map-get($font-sizes, $tag);
-  }
+	.#{$tag} {
+		font-size: map-get($font-sizes, $tag);
+	}
 }
 
 // Responsive headings (e.g. .h2-sm)
-@include mq(sm) {
-  @each $tag in (h2, h3, h4, h5, h6) {
-    .#{$tag}-sm {
-      font-size: map-get($font-sizes, $tag);
-    }
-  }
+@each $breakpoint, $size in $breakpoints {
+	@include mq(#{$breakpoint}) {
+		@each $tag in (h1, h2, h3, h4, h5, h6) {
+			.#{$tag}-#{$breakpoint} {
+				font-size: map-get($font-sizes, $tag);
+			}
+		}
+	}
 }
 
 // -----------------------------
 // Labels & Paragraphs
 // -----------------------------
 .label-lg, .label-md, .label-sm, .label-xs {
-  font-weight: map-get($font-weights, medium);
+	font-weight: map-get($font-weights, medium);
 }
 
 @each $name in (label-lg, label-md, label-sm, label-xs, p-lg, p-md, p-sm, p-xs) {
-  .#{$name} {
-    font-size: map-get($font-sizes, $name);
-  }
+	.#{$name} {
+		font-size: map-get($font-sizes, $name);
+	}
 }

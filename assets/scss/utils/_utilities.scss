@@ -11,7 +11,6 @@
 
 // Spacing
 @each $i, $space in $spacings {
-    // margin
     .m-#{$i}  { margin: $space; }
     .mt-#{$i} { margin-top: $space; }
     .me-#{$i} { margin-right: $space; }
@@ -26,7 +25,6 @@
         margin-bottom: $space;
     }
 
-    // padding
     .p-#{$i}  { padding: $space; }
     .pt-#{$i} { padding-top: $space; }
     .pe-#{$i} { padding-right: $space; }
@@ -41,13 +39,55 @@
         padding-bottom: $space;
     }
 }
+// Spacing breakpoint
+@each $breakpoint, $value in $breakpoints {
+    @include mq(#{$breakpoint}) {
+        @each $i, $space in $spacings {
+            .m-#{$breakpoint}-#{$i}  { margin: $space; }
+            .mt-#{$breakpoint}-#{$i} { margin-top: $space; }
+            .me-#{$breakpoint}-#{$i} { margin-right: $space; }
+            .mb-#{$breakpoint}-#{$i} { margin-bottom: $space; }
+            .ms-#{$breakpoint}-#{$i} { margin-left: $space; }
+            .mx-#{$breakpoint}-#{$i} {
+                margin-left: $space;
+                margin-right: $space;
+            }
+            .my-#{$breakpoint}-#{$i} {
+                margin-top: $space;
+                margin-bottom: $space;
+            }
+
+            .p-#{$breakpoint}-#{$i}  { padding: $space; }
+            .pt-#{$breakpoint}-#{$i} { padding-top: $space; }
+            .pe-#{$breakpoint}-#{$i} { padding-right: $space; }
+            .pb-#{$breakpoint}-#{$i} { padding-bottom: $space; }
+            .ps-#{$breakpoint}-#{$i} { padding-left: $space; }
+            .px-#{$breakpoint}-#{$i} {
+                padding-left: $space;
+                padding-right: $space;
+            }
+            .py-#{$breakpoint}-#{$i} {
+                padding-top: $space;
+                padding-bottom: $space;
+            }
+        }
+    }
+}
+
+
+
+// w-{breakpoint}-100
+@each $breakpoint, $size in $breakpoints {
+    @include mq(#{$breakpoint}) {
+        .w-#{$breakpoint}-100 {
+            width: 100%;
+        }
+    }
+}
 
 // text
 .text-center {
     text-align: center;
-}
-.text-primary, .text-secondary, .text-muted, .text-highlight, .text-on-dark {
-    letter-spacing: map-get($letter-spacings, normal);
 }
 .text-primay {
     color: map-get($neutral, 900);
@@ -64,3 +104,34 @@
 .text-on-dark {
     color: map-get($neutral, 0);
 }
+
+// link
+[class*="link"] {
+    transition: .3s;
+
+    &:disabled, &.disabled {
+        opacity: .4;
+    }
+}
+.link-primary {
+    border-bottom: 1px solid map-get($primary, 400);
+    padding-bottom: map-get($spacings, 1);
+    color: map-get($primary, 400);
+
+    &:hover, &:focus, &.active {
+        color: map-get($primary, 500);
+    }
+}
+.link-neutral {
+    @include space(padding, 3, 0);
+    color: map-get($neutral, 900);
+
+    &:hover {
+        color: map-get($neutral, 600);
+    }
+
+    &:focus, &.active {
+        border-bottom: 2px solid map-get($neutral, 900);
+        color: map-get($neutral, 900);
+    } 
+} 

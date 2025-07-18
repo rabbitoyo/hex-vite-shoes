@@ -1,15 +1,7 @@
 .call-to-action {
     background: map-get($primary, 200);
 
-    .h4 {
-        margin-right: map-get($spacings, 5);
-    }
-
     @include mq(sm) {
-        .h4 {
-            margin-right: map-get($spacings, 4);
-        }
-        
         .btn {
             @include space(padding, 2, 4);
         }
@@ -24,11 +16,8 @@
 
         .h4 {
             margin: 0 auto;
-            margin-bottom: map-get($spacings, 4);
-        }
-
-        .btn {
-            @include space(padding, 3, 5);
+            margin-bottom: map-get($spacings, 3);
+            text-align: center;
         }
     }
 }

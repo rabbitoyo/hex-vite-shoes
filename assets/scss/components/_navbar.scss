@@ -8,7 +8,6 @@
 
         .nav-link {
             color: map-get($neutral, 900);
-            transition: .3s;
 
             &:hover {
                 color: map-get($neutral, 600);

@@ -10,15 +10,21 @@
 
 - 將專案 clone 到本地端
 
-```sh
+```bash
 git clone https://github.com/rabbitoyo/hex-vite-shoes.git
 ```
 
 - 安裝執行
 
-```sh
+```bash
 npm install				// 安裝
 npm run dev				// 執行
+```
+
+- 瀏覽器訪問
+
+```bash
+http://localhost:5173/
 ```
 
 ### 🗂 專案設置

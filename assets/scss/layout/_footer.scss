@@ -1,5 +1,4 @@
 .footer {
-    @include space(padding, 10, 0);
     background: map-get($neutral, 100);
 
     .copyright {
@@ -11,19 +10,12 @@
     }
 
     @include mq(sm) {
-        @include space(padding, 6, 0);
-
         .d-flex {
             flex-wrap: wrap;
         }
 
-        .nav {
-            width: 100%;
-        }
-
         .navbar-nav {
             flex-wrap: wrap;
-            @include space(padding, 0, 3);
 
             .nav-item {
                 margin-right: map-get($spacings, 0);

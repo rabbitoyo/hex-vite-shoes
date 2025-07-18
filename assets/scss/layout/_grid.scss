@@ -35,15 +35,15 @@
 // Col-* Grid
 // -----------------------------
 @for $i from 1 through 12 {
-  .col-#{$i} {
-    width: calc(100% / 12 * #{$i});
-  }
+	.col-#{$i} {
+		width: calc(100% / 12 * #{$i});
+	}
 }
 
-@each $breakpoint in (sm, md, lg, xl) {
-  @include mq(#{$breakpoint}) {
-    .col-#{$breakpoint} {
-      width: 100%;
-    }
-  }
+@each $breakpoint in (sm, md, lg, xl, xxl) {
+	@include mq(#{$breakpoint}) {
+		.col-#{$breakpoint} {
+			width: 100%;
+		}
+	}
 }
