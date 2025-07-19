@@ -1,16 +1,9 @@
 .breadcrumb { 
+    display: flex;
+
     .breadcrumb-item {
         display: flex;
-        color: map-get($neutral, 900);
-
-        a {
-            margin-right: map-get($spacings, 8);
-            color: map-get($neutral, 600);
-
-            &:hover {
-                color: map-get($primary, 400);
-            }
-        }
+        margin-right: map-get($spacings, 3);
 
         &::before {
             content: "/";
@@ -22,6 +15,22 @@
 
         &:first-child:before {
             display: none;
+        }
+
+        @include mq(sm) {
+            margin-right: map-get($spacings, 2);
+
+            &::before {
+                margin-right: map-get($spacings, 2);
+            }
+        }
+    }
+
+    .breadcrumb-link {
+        color: map-get($neutral, 600);
+
+        &:hover {
+            color: map-get($primary, 400);
         }
     }
 }

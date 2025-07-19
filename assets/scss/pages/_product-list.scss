@@ -1,9 +1,6 @@
 .product {
-    padding: 2rem 0;
-
     .h3 {
         padding: 7px 0;
-        font-size: 1.75rem;
     }
 
     .nav {
@@ -11,44 +8,34 @@
         top: 5rem;
     }
 
-    .nav .nav-item {
-        margin-bottom: 1rem;
-        
-        .nav-link {
-            padding: .75rem 0;
-            transition: .3s;
-    
-            &:hover, &.active {
-                color: map-get($primary, 400);
-            }
+    .nav-link {
+        &:hover, &.active {
+            color: map-get($primary, 400);
         }
     }
 
-    @media (max-width: 1200px) {
+    @include mq(xl) {
         .nav {
             display: flex;
-            flex-wrap: wrap;
-            margin-bottom: .75rem;
+        }
+    }
 
-            .nav-item {
-                margin: 0 .5rem;
-
-                &:first-child {
-                    margin-left: 0;
-                }
-
-                @media (max-width: 768px) {
-                    margin: 0;
-                    width: calc(100% /2);
-                }
-            }
+    @include mq(sm) {
+        .h4-sm {
+            padding: 9.5px 0;
+        }
+        .product-list > * {
+            @include space(padding, 0);
+        }
+        .product-list, .product-list > * {
+            padding: 0 .375rem;
         }
     }
 }
 
-.product-item {
+.product-link {
     .product-img {
-        transition: .5s;
+        transition: .3s;
     }
 
     &:hover .product-img {

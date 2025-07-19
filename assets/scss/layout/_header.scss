@@ -18,6 +18,7 @@
     @include mq(sm) {
         .container {
             @include space(padding, 0);
+            max-width: inherit;
         }
         
         .d-flex {
@@ -39,6 +40,12 @@
             position: absolute;
             right: map-get($spacings, 3);
             top: map-get($spacings, 3);
+
+            i {
+                position: relative;
+                top: 0;
+                right: 0;
+            }
         }
     }
 }

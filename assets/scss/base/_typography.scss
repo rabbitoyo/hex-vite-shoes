@@ -44,8 +44,19 @@
 	font-weight: map-get($font-weights, medium);
 }
 
-@each $name in (label-lg, label-md, label-sm, label-xs, p-lg, p-md, p-sm, p-xs) {
-	.#{$name} {
-		font-size: map-get($font-sizes, $name);
-	}
+@each $tag in (label-lg, label-md, label-sm, label-xs, p-lg, p-md, p-sm, p-xs) {
+  .#{$tag} {
+    font-size: map-get($font-sizes, $tag);
+  }
+}
+
+// Responsive Labels & Paragraphs
+@each $breakpoint, $value in $breakpoints {
+  @include mq(#{$breakpoint}) {
+    @each $tag in (label-lg, label-md, label-sm, label-xs, p-lg, p-md, p-sm, p-xs) {
+      .#{$tag}-#{$breakpoint} {
+        font-size: map-get($font-sizes, $tag);
+      }
+    }
+  }
 }
