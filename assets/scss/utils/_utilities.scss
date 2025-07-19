@@ -39,8 +39,21 @@
         padding-bottom: $space;
     }
 }
+
+@function reverse($map) {
+    $keys: map-keys($map);
+    $reversed: ();
+
+    @for $i from length($keys) through 1 {
+        $key: nth($keys, $i);
+        $reversed: map-merge($reversed, ($key: map-get($map, $key)));
+    }
+
+    @return $reversed;
+}
+
 // Spacing breakpoint
-@each $breakpoint, $value in $breakpoints {
+@each $breakpoint, $value in reverse($breakpoints) {
     @include mq(#{$breakpoint}) {
         @each $i, $space in $spacings {
             // margin

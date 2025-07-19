@@ -1,14 +1,17 @@
-.btn {
-    border-radius: map-get($radius, sm);
-    @include space(padding, 3, 5);
+// btn
+[class*="btn"] {
     transition: .3s;
-
-    &.btn-sm {
-        @include space(padding, 2, 4);
-    }
 
     &:disabled, &.disabled {
         opacity: .4;
+    }
+}
+.btn {
+    border-radius: map-get($radius, sm);
+    @include space(padding, 3, 5);
+
+    &.btn-sm {
+        @include space(padding, 2, 4);
     }
 }
 .btn-primary {
