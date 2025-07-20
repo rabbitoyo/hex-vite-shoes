@@ -4,9 +4,11 @@
     }
 }
 
-.product-images { 
+.product-images {
+    margin-right: - map-get($spacings, 2);
+
     .row {
-        @include space(padding, 0, 2);
+        margin: 0 - map-get($spacings, 1);
     }
 
     .row > * {
@@ -18,6 +20,7 @@
     }
 
     @include mq(lg) {
+        margin: 0 auto;
         max-width: 540px;
 
         .row {
@@ -221,6 +224,9 @@
             @include space(padding, 2, 0);
         }
     }
+    .product-list {
+        margin-right: - map-get($spacings, 5);
+    }
 
     @include mq(sm) {
         .container {
@@ -228,6 +234,8 @@
         }
 
         .product-list {
+            margin: 0 auto;
+            
             .row {
                 flex-direction: row;
                 flex-wrap: nowrap;
