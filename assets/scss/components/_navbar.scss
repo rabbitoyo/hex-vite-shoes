@@ -9,7 +9,7 @@
         .nav-link {
             color: map-get($neutral, 900);
 
-            &:hover {
+            &:hover, &:focus, &.active {
                 color: map-get($neutral, 600);
 
                 @include mq(md) {

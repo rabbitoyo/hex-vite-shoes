@@ -1,152 +1,246 @@
-.product-info {
-    padding: 4rem 0;
+@include mq(sm) {
+    .col-7.col-xl-4 {
+        @include space(padding, 0);
+    }
+}
 
-    @media (max-width: 1200px) {
-        padding: 2rem 0;
+.product-images { 
+    .row {
+        @include space(padding, 0, 2);
+    }
 
-        .product-images {
-            margin-bottom: 1rem;
+    .row > * {
+        @include space(padding, 0, 1);
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    @include mq(lg) {
+        max-width: 540px;
+
+        .row {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            margin: 0 auto;
+            @include space(padding, 0);
+        }
+
+        .row > * {
+            @include space(padding, 0);
+        }
+
+        .swiper-side {
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .swiper-pagination {
+            display: block;
+            padding-right: map-get($spacings, 3);
+            text-align: right;
+            bottom: map-get($spacings, 3);
         }
     }
+}
 
-    .h2 {
-        font-size: 2rem;
+.product-info {
+    @include mq(xl) {
+        position: sticky;
+        top: 6rem;
     }
+}
 
+.product-intro {
     .h5 {
+        display: flex;
         color: map-get($primary, 400);
-        font-size: 1.25rem;
 
         .price {
             color: map-get($neutral, 500);
-            font-size: .875rem;
             font-weight: initial;
-            line-height: 1.5;
+            align-self: center;
         }
     }
 
-    .product-color {
+    @include mq(sm) {
+        .h4-sm {
+            font-family: "Montserrat", sans-serif;
+        }
 
-        li {
-            max-width: 64px;
+        .h6-sm {
+            font-family: "Montserrat", sans-serif;
+        }
+    }
+}
 
-            p {
-                color: map-get($neutral, 600);
-            }
+.product-color {
+    .product-item {
+        margin-right: map-get($spacings, 2);
+        max-width: 64px;
+
+        .label-md {
+            color: map-get($neutral, 600);
+        }
+    }
+}
+
+.product-sizes-list {
+    padding-right: 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    .row {
+        @include space(margin, 0);
+        margin: 0 -.25rem;
+    }
+
+    .row > * {
+        @include space(padding, 0, 1);
+    }
+
+    .btn {
+        @include space(margin, 0);
+        border: 1px solid map-get($neutral, 300);
+        width: 100%;
+
+        &.active {
+            border: 1px solid map-get($neutral, 900);
+        }
+
+        &:hover {
+            border: 1px solid map-get($neutral, 600);
+        }
+
+        &:disabled, &.disabled, &.disabled:hover {
+            border: 1px solid map-get($neutral, 300);
+            cursor: not-allowed;
         }
     }
 
-    .text-intro, .text-last {
-        font-weight: initial;
+    @include mq(xxl) {
+        padding-right: 0;
     }
 
-    .text-last {
+    @include mq(sm) {
+        padding-right: 23px;
+    }
+
+    @include mq(xs) {
+        padding-right: 0;
+    }
+}
+
+.product-sizes {
+    .p-sm {
         color: map-get($danger, 300);
     }
-    
-    .product-size-btn {
-        padding-right: 1.375rem;
+}
+
+.product-btns {
+    .row {
+        @include space(margin, 0);
+        margin: 0 -.25rem;
+    }
+
+    .row > * {
+        @include space(padding, 0, 1);
+    }
+
+    .btn {
         display: flex;
-        flex-wrap: wrap;
-        gap: .5rem;
-
-        @media (max-width: 1200px) {
-            padding-right: 0;
-            justify-content: space-between;
-        }
-
-        .btn {
-            border: 1px solid map-get($neutral, 300);
-            width: calc(100%/3 - .5rem);
-            padding: 0;
-            padding-top: calc(.75rem - 1px);
-            padding-bottom: calc(.75rem - 1px);
-
-            @media (max-width: 576px) {
-                width: calc(100%/2 - .5rem);
-            }
-
+        width: 100%;
+        font-size: 1.25rem;
+        justify-content: center;
+        
+        i {
+            border: none;
+            display: inline-block;
+            width: auto;
+            align-self: center;
+            background: none;
+            
             &:hover {
-                border: 1px solid map-get($neutral, 600);
-            }
-
-            &.active, &:active {
-                border: 1px solid map-get($neutral, 900);
-            }
-
-            &.disabled, &.disabled:hover {
-                border: 1px solid map-get($neutral, 300);
-                opacity: .4;
-                cursor: not-allowed;
+                background: none;
             }
         }
     }
 
-    .product-btns {
-        display: flex;
-        gap: .5rem;
+    @include mq(sm) {
+        .row {
+            flex-direction: row-reverse;
+            flex-wrap: nowrap;
+        }
 
-        @media (max-width: 576px) {
-            flex-wrap: wrap;
+        .col-6 {
+            width: 100%;
+        }
+
+        .col-6:first-child {
+            width: auto;
         }
 
         .btn {
-            border: 1px solid map-get($neutral, 900);
-            padding-top: calc(.75rem - 1px);
-            padding-bottom: calc(.75rem - 1px);
-            width: calc(100%/2);
-            font-size: 1.25rem;
-            font-family: initial;
-            line-height: 0;
-            letter-spacing: 0;
 
-            @media (max-width: 576px) {
-                width: 100%;
-            }
+            &.btn-neutral-outlined {
+                border: none;
+                @include space(padding, 3);
+                max-width: 48px;
+                font-size: 1.5rem;
 
-            span {
-                font-size: initial;
-                margin-left: .25rem;
-            }
+                &:hover {
+                    color: map-get($primary, 400);
+                    background: none;
+                }
 
-            &:hover, &.btn-dark {
-                color: map-get($neutral, 0);
-                background: map-get($neutral, 900);
-
-                span {
-                    color: map-get($neutral, 0);
+                .label-md {
+                    display: none;
                 }
             }
-
-            &.btn-dark:hover {
-                background: map-get($neutral, 700);
-            }
         }
     }
+}
 
-    .product-matters-item {
-        border-bottom: 1px solid map-get($neutral, 300);
-        padding-top: .75rem;
-        padding-bottom: calc(.75rem - 1px);
+.product-matters-item {
+    border-bottom: 1px solid map-get($neutral, 300);
 
-        li {
-            color: map-get($neutral, 600);
-            font-weight: initial;
-        }
+    li {
+        color: map-get($neutral, 600);
     }
 }
 
 .best-seller {
     .h4 {
         padding: 9.5px 0;
-        font-size: 1.5rem;
+
+        @include mq(lg) {
+            @include space(padding, 2, 0);
+        }
     }
 
-    @media (max-width: 768px){
-        padding: 1.5rem 0;
+    @include mq(sm) {
+        .container {
+            padding-right: map-get($spacings, 0);
+        }
 
-        .product-item {
-            padding-bottom: 3rem;
+        .product-list {
+            .row {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                margin: 0 auto;
+
+                li:first-child {
+                    margin-left: - map-get($spacings, 2);
+                }
+            }
+
+            .row > * {
+                @include space(padding, 0, 2);
+            }
         }
     }
 }

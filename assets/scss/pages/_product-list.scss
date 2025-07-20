@@ -5,7 +5,7 @@
 
     .nav {
         position: sticky;
-        top: 5rem;
+        top: map-get($spacings, 11);
     }
 
     .nav-link {

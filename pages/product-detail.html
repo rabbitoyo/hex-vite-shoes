@@ -11,104 +11,133 @@
 	<%- include('./layout/header'); -%>
 
 	<main>
-		<section class="product-info">
+		<section class="py-10 py-xl-6 py-lg-0">
             <div class="container">
                 <div class="row">
-                    <div class="col-7">
-                        <div class="product-images px-2">
-                            <div class="row g-1">
-                                <div class="col-6 mb-2">
+                    <div class="col-7 col-xl-4 col-lg mb-lg-5 px-sm-0">
+                        <div class="swiper product-images">
+                            <ul class="swiper-wrapper row">
+                                <li class="swiper-slide col-6 col-xl mb-2 mb-lg-0">
                                     <img src="../assets/images/image.png" alt="PLATFORM 404">
-                                </div>
-                                <div class="col-6 mb-2">
+                                </li>
+                                <li class="swiper-slide col-6 col-xl mb-2 mb-lg-0">
                                     <img src="../assets/images/image-1.png" alt="PLATFORM 404">
-                                </div>
-                                <div class="col-6 mb-2">
+                                </li>
+                                <li class="swiper-slide col-6 col-xl mb-2 mb-lg-0">
                                     <img src="../assets/images/image-2.png" alt="PLATFORM 404">
-                                </div>
-                                <div class="col-6 mb-2">
+                                </li>
+                                <li class="swiper-slide col-6 col-xl mb-2 mb-lg-0">
                                     <img src="../assets/images/image-3.png" alt="PLATFORM 404">
-                                </div>
-                                <div class="col-6">
+                                </li>
+                                <li class="swiper-slide col-6 col-xl mb-2 mb-lg-0">
                                     <img src="../assets/images/image-4.png" alt="PLATFORM 404">
-                                </div>
-                                <div class="col-6 mb-2">
+                                </li>
+                                <li class="swiper-slide col-6 col-xl mb-2 mb-lg-0">
                                     <img src="../assets/images/image-5.png" alt="PLATFORM 404">
-                                </div>
-                                <div class="col-6 mb-2">
+                                </li>
+                                <li class="swiper-slide col-6 col-xl mb-xl-2 mb-lg-0">
                                     <img src="../assets/images/image-6.png" alt="PLATFORM 404">
-                                </div>
-                                <div class="col-6 mb-2">
+                                </li>
+                                <li class="swiper-slide col-6 col-xl mb-xl-2 mb-lg-0">
                                     <img src="../assets/images/image-7.png" alt="PLATFORM 404">
-                                </div>
-                            </div>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                    <div class="col-5">
-                        <div class="product-intro">
-                            <nav>
-                                <ol class="breadcrumb d-flex mb-2y">
-                                    <li class="breadcrumb-item">
-                                        <a href="#">首頁</a>
-                                    </li>
-                                    <li class="breadcrumb-item">
-                                        <a href="#">女鞋</a>
-                                    </li>
-                                    <li class="breadcrumb-item">
-                                        <a href="#">滑板鞋</a>
-                                    </li>
-                                    <li class="breadcrumb-item">Platform 404</li>
-                                </ol>
-                            </nav>
-                            <h2 class="h2 mb-3">Platform 404</h2>
-                            <h5 class="h5 mb-3">NT$2,600<del class="price ml-2">NT$3,200</del></h5>
-                            <p class="text-intro mb-2y">Platform 404 以柔和奶白為底，搭配深藍色皮革點綴，走在街上自帶回頭率。鞋型採用復古運動風輪廓，結合輕量厚底與柔軟泡棉鞋舌，兼顧美感與舒適。</p>
-                            <p class="text-intro mb-4y">鞋身選用柔軟皮革材質，打造出清新卻不失個性的氛圍，並以鞋面透氣孔設計提升穿著體驗，兼顧質感與舒適度，適合日常長時間著用。無論是街頭穿搭、日常通勤或週末出遊都能輕鬆駕馭。</p>
-                            <div class="product-color mb-4y">
-                                <p class="text-intro mb-2">顏色</p>
-                                <ul class="d-flex">
-                                    <li class="mr-2">
-                                        <a class="product-item" href="#">
-                                            <img class="product-img mb-1" src="../assets/images/product.png" alt="Platform 404">
-                                            <p class="text-center">藍色</p>
+                    <div class="col-5 col-xl-8 col-lg">
+                        <div class="product-info">
+                            <div class="product-intro mb-6">
+                                <nav class="mb-3 mb-sm-2">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item label-md label-sm-sm label-sm-sm">
+                                            <a class="breadcrumb-link" href="index.html">首頁</a>
+                                        </li>
+                                        <li class="breadcrumb-item label-md label-sm-sm label-sm-sm">
+                                            <a class="breadcrumb-link" href="product-list.html">女鞋</a>
+                                        </li>
+                                        <li class="breadcrumb-item label-md label-sm-sm label-sm-sm">
+                                            <a class="breadcrumb-link" href="product-list.html">滑板鞋</a>
+                                        </li>
+                                        <li class="breadcrumb-item label-md label-sm-sm">Platform 404</li>
+                                    </ol>
+                                </nav>
+                                <h2 class="h2 h4-sm mb-4 mb-sm-3">Platform 404</h2>
+                                <h5 class="h5 h6-sm mb-4">NT$2,600<del class="price p-sm ms-2">NT$3,200</del></h5>
+                                <p class="mb-3">Platform 404 以柔和奶白為底，搭配深藍色皮革點綴，走在街上自帶回頭率。鞋型採用復古運動風輪廓，結合輕量厚底與柔軟泡棉鞋舌，兼顧美感與舒適。</p>
+                                <p>鞋身選用柔軟皮革材質，打造出清新卻不失個性的氛圍，並以鞋面透氣孔設計提升穿著體驗，兼顧質感與舒適度，適合日常長時間著用。無論是街頭穿搭、日常通勤或週末出遊都能輕鬆駕馭。</p>
+                            </div>
+                            <div class="product-color mb-6">
+                                <p class="mb-2">顏色</p>
+                                <ul class="product-list d-flex">
+                                    <li class="product-item">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="../assets/images/product.png" alt="Platform 404">
+                                            <p class="label-md text-center mt-1">藍色</p>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a class="product-item" href="#">
-                                            <img class="product-img mb-1" src="../assets/images/product-1.png" alt="Platform 404">
-                                            <p class="text-center">卡其色</p>
+                                    <li class="product-item">
+                                        <a class="product-link" href="#">
+                                            <img class="product-img" src="../assets/images/product-1.png" alt="Platform 404">
+                                            <p class="label-md text-center mt-1">卡其色</p>
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="product-size mb-5">
-                                <p class="text-intro mb-2">尺寸</p>
-                                <div class="product-size-btn mb-2">
-                                    <button class="btn active">35(22.5cm)</button>
-                                    <button class="btn">36(23.0cm)</button>
-                                    <button class="btn">37(23.5cm)</button>
-                                    <button class="btn">38(24.0cm)</button>
-                                    <button class="btn">39(24.5cm)</button>
-                                    <button class="btn">40(25.0cm)</button>
-                                    <button class="btn">41(26.0cm)</button>
-                                    <button class="btn disabled">42(26.5cm)</button>
-                                    <button class="btn disabled">43(27.0cm)</button>
+                            <div class="product-sizes mb-8 mb-sm-5">
+                                <p class="mb-2">尺寸</p>
+                                <div class="product-sizes-list">
+                                    <ul class="row">
+                                        <li class="col-4 col-sm-6 mb-2">
+                                            <button class="label-md btn active" type="button">35(22.5cm)</button>
+                                        </li>
+                                        <li class="col-4 col-sm-6 mb-2">
+                                            <button class="label-md btn" type="button">36(23.0cm)</button>
+                                        </li>
+                                        <li class="col-4 col-sm-6 mb-2">
+                                            <button class="label-md btn" type="button">37(23.5cm)</button>
+                                        </li>
+                                        <li class="col-4 col-sm-6 mb-2">
+                                            <button class="label-md btn" type="button">38(24.0cm)</button>
+                                        </li>
+                                        <li class="col-4 col-sm-6 mb-2">
+                                            <button class="label-md btn" type="button">39(24.5cm)</button>
+                                        </li>
+                                        <li class="col-4 col-sm-6 mb-2">
+                                            <button class="label-md btn" type="button">40(25.0cm)</button>
+                                        </li>
+                                        <li class="col-4 col-sm-6 mb-2">
+                                            <button class="label-md btn" type="button">41(26.0cm)</button>
+                                        </li>
+                                        <li class="col-4 col-sm-6 mb-2">
+                                            <button class="label-md btn disabled" type="button">42(26.5cm)</button>
+                                        </li>
+                                        <li class="col-4 col-sm-6 mb-2">
+                                            <button class="label-md btn disabled" type="button">43(27.0cm)</button>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <p class="text-last">僅剩 3 雙</p>
+                                <p class="p-sm">僅剩 3 雙</p>
                             </div>
-                            <div class="product-btns mb-4y">
-                                <button class="btn">
-                                    <i class="bi bi-heart"></i>
-                                    <span>加入收藏</span>
-                                </button>
-                                <button class="btn btn-dark">
-                                    <i class="bi bi-handbag"></i>
-                                    <span>門市預約試穿</span>
-                                </button>
+                            <div class="product-btns mb-6">
+                                <ul class="row">
+                                    <li class="col-6">
+                                        <a class="btn btn-neutral-outlined" href="favorites.html">
+                                            <i class="bi bi-heart"></i>
+                                            <span class="label-md ms-2">加入收藏</span>
+                                        </a>
+                                    </li>
+                                    <li class="col-6">
+                                        <a class="btn btn-neutral-fill" href="#">
+                                            <i class="bi bi-handbag"></i>
+                                            <span class="label-md ms-2">門市預約試穿</span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="product-matters">
-                                <div class="product-matters-item">
-                                    <p class="mb-1">商品材質</p>
+                                <div class="product-matters-item py-3">
+                                    <p class="label-md mb-1">商品材質</p>
                                     <ul>
                                         <li>鞋面：合成皮革（Synthetic Leather）</li>
                                         <li>內裡：透氣網布材質，提升舒適與排汗性</li>
@@ -116,16 +145,16 @@
                                         <li>鞋帶：聚酯纖維，耐拉扯不易鬆脫</li>
                                     </ul>
                                 </div>
-                                <div class="product-matters-item">
-                                    <p class="mb-1">購買須知</p>
+                                <div class="product-matters-item py-3">
+                                    <p class="label-md mb-1">購買須知</p>
                                     <ul>
                                         <li>商品顏色因螢幕顯示可能略有差異，請以實品為準。</li>
                                         <li>建議首次穿著前試穿確認尺寸，避免影響退換貨權益。</li>
                                         <li>本商品為限量發售，庫存有限，如需更換尺寸請儘早聯繫客服協助處理。</li>
                                     </ul>
                                 </div>
-                                <div class="product-matters-item">
-                                    <p class="mb-1">保養方式</p>
+                                <div class="product-matters-item py-3">
+                                    <p class="label-md mb-1">保養方式</p>
                                     <ul>
                                         <li>建議以乾布或微濕軟布擦拭表面汙漬，避免機洗或長時間浸水。</li>
                                         <li>收納時請放置於乾燥通風處，避免日曬及高溫導致變形或龜裂。</li>
@@ -138,54 +167,57 @@
                 </div>
             </div>
         </section>
-        <section class="best-seller py-5">
+        <section class="best-seller mb-7 mb-lg-5 py-8 py-lg-7">
             <div class="container">
-                <h4 class="h4 mb-3">你可能也喜歡...</h4>
-                <ul class="row">
-                    <li class="col-3 col-sm-6">
-                        <a class="product-item" href="#">
-                            <img class="product-img" src="../assets/images/product-2.png" alt="PLATFORM 404">
-                            <div class="product-body">
-                                <h6 class="h6 mb-1">VM001</h6>
-                                <p class="product-price">NT$2,600</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-3 col-sm-6">
-                        <a class="product-item" href="#">
-                            <img class="product-img" src="../assets/images/product-3.png" alt="PLATFORM 404">
-                            <div class="product-body">
-                                <h6 class="h6 mb-1">Melty Kiss</h6>
-                                <p class="product-price">NT$4,000</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-3 col-sm-6">
-                        <a class="product-item" href="#">
-                            <img class="product-img" src="../assets/images/product-4.png" alt="PLATFORM 404">
-                            <div class="product-body">
-                                <h6 class="h6 mb-1">BOOMBLOK</h6>
-                                <p class="product-price">NT$3,200</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="col-3 col-sm-6">
-                        <a class="product-item" href="#">
-                            <img class="product-img" src="../assets/images/product-7.png" alt="PLATFORM 404">
-                            <div class="product-body">
-                                <h6 class="h6 mb-1">Sugar Snap</h6>
-                                <p class="product-price">NT$3,200</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                <h3 class="h4 h5-sm mb-4">你可能也喜歡...</h3>
+                <div class="swiper product-list">
+                    <ul class="swiper-wrapper row">
+                        <li class="swiper-slide col-3 col-lg-6 col-sm mb-lg-5 mb-sm-0">
+                            <a class="product-link" href="#">
+                                <img class="product-img" src="../assets/images/product-2.png" alt="VM001">
+                                <div class="product-body mt-3">
+                                    <h6 class="h6 mb-1">VM001</h6>
+                                    <p class="label-md">NT$2,600</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide col-3 col-lg-6 col-sm mb-lg-5 mb-sm-0">
+                            <a class="product-link" href="#">
+                                <img class="product-img" src="../assets/images/product-3.png" alt="Melty Kiss">
+                                <div class="product-body mt-3">
+                                    <h6 class="h6 mb-1">Melty Kiss</h6>
+                                    <p class="label-md">NT$4,000</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide col-3 col-lg-6 col-sm mb-lg-5 mb-sm-0">
+                            <a class="product-link" href="#">
+                                <img class="product-img" src="../assets/images/product-4.png" alt="BOOMBLOK">
+                                <div class="product-body mt-3">
+                                    <h6 class="h6 mb-1">BOOMBLOK</h6>
+                                    <p class="label-md">NT$3,200</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="swiper-slide col-3 col-lg-6 col-sm mb-lg-5 mb-sm-0">
+                            <a class="product-link" href="#">
+                                <img class="product-img" src="../assets/images/product-7.png" alt="Sugar Snap">
+                                <div class="product-body mt-3">
+                                    <h6 class="h6 mb-1">Sugar Snap</h6>
+                                    <p class="label-md">NT$3,200</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 		<%- include('./layout/call-to-action'); -%>
 
 	</main>
 	<%- include('./layout/footer'); -%>
-	
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
 	<script type="module" src="../main.js"></script>
 </body>
 </html>

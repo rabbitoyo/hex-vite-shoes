@@ -3,6 +3,9 @@
 @import './utils/mixins.scss';
 @import './utils/utilities.scss';
 
+// vendors
+@import './vendors/swiper-bundle.scss';
+
 // base
 @import './base/reset.scss';
 @import './base/base.scss';

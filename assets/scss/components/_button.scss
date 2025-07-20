@@ -9,6 +9,7 @@
 .btn {
     border-radius: map-get($radius, sm);
     @include space(padding, 3, 5);
+    text-align: center;
 
     &.btn-sm {
         @include space(padding, 2, 4);
