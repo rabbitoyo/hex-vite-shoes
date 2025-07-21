@@ -145,6 +145,9 @@
 .text-highlight {
     color: map-get($primary, 400);
 }
+.text-highlight-lighten {
+    color: map-get($primary, 300);
+}
 .text-on-dark {
     color: map-get($neutral, 0);
 }

@@ -21,6 +21,7 @@
     }
 
     .page-link {
+        display: block;
         @include space(padding, 2, 0);
         text-align: center;
 

@@ -25,6 +25,14 @@
             flex-wrap: wrap;
         }
 
+        .nav {
+            display: none;
+
+            &.d-sm-block {
+                display: block;
+            }
+        }
+
         .navbar-nav .nav-item {
             margin: map-get($spacings, 0);
             width: calc(100% / 2);

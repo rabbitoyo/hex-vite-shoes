@@ -61,10 +61,8 @@
 .product-intro {
     .h5 {
         display: flex;
-        color: map-get($primary, 400);
 
         .price {
-            color: map-get($neutral, 500);
             font-weight: initial;
             align-self: center;
         }
@@ -217,6 +215,10 @@
 }
 
 .best-seller {
+    .container {
+        overflow: hidden;
+    }
+    
     .h4 {
         padding: 9.5px 0;
 

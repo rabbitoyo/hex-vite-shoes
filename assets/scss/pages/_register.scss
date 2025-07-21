@@ -42,6 +42,7 @@
     }
 
     .link-verify {
+        width: 100%;
         color: map-get($neutral, 600);
         text-align: center;
         border-bottom: 2px solid map-get($neutral, 300);

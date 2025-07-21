@@ -2,6 +2,20 @@ import './assets/scss/all.scss';
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    // ---------- 首頁判斷：顯示 nav ----------
+    const nav = document.querySelector(".header .nav");
+    if (nav) {
+        const path = location.pathname;
+        const isHomePage =
+        path.includes("index.html") || path === "/hex-vite-shoes/";
+
+        if (isHomePage) {
+            nav.classList.add("d-sm-block");
+        } else {
+            nav.classList.remove("d-sm-block");
+        }
+    }
+
     // ---------- register / login ----------
     const registerSection = document.querySelector(".register");
     if (registerSection) {
@@ -28,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ---------- 通用 Swiper 啟用函式 ----------
-    function initResponsiveSwiper({ selector, maxWidth, options }) {
+    function initResponsiveSwiper({ selector, options = {}, maxWidth = null }) {
         const container = document.querySelector(selector);
         if (!container) return;
 
@@ -37,6 +51,15 @@ document.addEventListener("DOMContentLoaded", function () {
         function toggleSwiper() {
             const screenWidth = window.innerWidth;
 
+            // 無響應式需求：直接初始化一次
+            if (!maxWidth) {
+                if (!swiperInstance) {
+                    swiperInstance = new Swiper(selector, options);
+                }
+                return;
+            }
+
+            // 有 maxWidth 時才做響應式切換
             if (screenWidth < maxWidth && !swiperInstance) {
                 swiperInstance = new Swiper(selector, options);
             } else if (screenWidth >= maxWidth && swiperInstance) {
@@ -46,8 +69,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         toggleSwiper();
-        window.addEventListener("resize", toggleSwiper);
+        if (maxWidth) {
+            window.addEventListener("resize", toggleSwiper);
+        }
     }
+
+    // ---------- sales-banner ----------
+    initResponsiveSwiper({
+        selector: ".sales-banner",
+        options: {
+            effect: 'fade',
+            loop: true,
+            autoplay: {
+                delay: 10000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+        }
+    });
 
     // ---------- product-images ----------
     initResponsiveSwiper({
@@ -65,6 +106,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // ---------- best-seller ----------
     initResponsiveSwiper({
         selector: ".best-seller .product-list",
+        maxWidth: 576,
+        options: {
+            slidesPerView: 1.16
+        },
+    });
+
+    // ---------- outfit-images ----------
+    initResponsiveSwiper({
+        selector: ".outfit-images",
         maxWidth: 576,
         options: {
             slidesPerView: 1.16,

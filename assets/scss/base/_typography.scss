@@ -5,11 +5,20 @@
 	font-weight: map-get($font-weights, bold);
 	line-height: map-get($line-heights, normal);
 }
-.display-1 {
-	font-size: 4rem;
+@each $tag in (display-1, display-2) {
+	.#{$tag} {
+		font-size: map-get($font-sizes, $tag);
+	}
 }
-.display-2 {
-	font-size: 3rem;
+// Responsive headings (e.g. .h2-sm)
+@each $breakpoint, $size in reverse($breakpoints) {
+	@include mq(#{$breakpoint}) {
+		@each $tag in (display-1, display-2) {
+			.#{$tag}-#{$breakpoint} {
+				font-size: map-get($font-sizes, $tag);
+			}
+		}
+	}
 }
 
 // -----------------------------
@@ -27,7 +36,7 @@
 }
 
 // Responsive headings (e.g. .h2-sm)
-@each $breakpoint, $size in $breakpoints {
+@each $breakpoint, $size in reverse($breakpoints) {
 	@include mq(#{$breakpoint}) {
 		@each $tag in (h1, h2, h3, h4, h5, h6) {
 			.#{$tag}-#{$breakpoint} {
@@ -45,18 +54,18 @@
 }
 
 @each $tag in (label-lg, label-md, label-sm, label-xs, p-lg, p-md, p-sm, p-xs) {
-  .#{$tag} {
-    font-size: map-get($font-sizes, $tag);
-  }
+	.#{$tag} {
+		font-size: map-get($font-sizes, $tag);
+	}
 }
 
 // Responsive Labels & Paragraphs
-@each $breakpoint, $value in $breakpoints {
-  @include mq(#{$breakpoint}) {
-    @each $tag in (label-lg, label-md, label-sm, label-xs, p-lg, p-md, p-sm, p-xs) {
-      .#{$tag}-#{$breakpoint} {
-        font-size: map-get($font-sizes, $tag);
-      }
-    }
-  }
+@each $breakpoint, $size in reverse($breakpoints) {
+	@include mq(#{$breakpoint}) {
+		@each $tag in (label-lg, label-md, label-sm, label-xs, p-lg, p-md, p-sm, p-xs) {
+			.#{$tag}-#{$breakpoint} {
+				font-size: map-get($font-sizes, $tag);
+			}
+		}
+	}
 }
