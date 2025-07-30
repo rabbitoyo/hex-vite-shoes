@@ -11,7 +11,7 @@
     @include space(padding, 3, 5);
     text-align: center;
 
-    &.btn-sm {
+    &-sm {
         @include space(padding, 2, 4);
     }
 }

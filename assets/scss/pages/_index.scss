@@ -261,7 +261,7 @@
             @include space(padding, 0, 2);
 
             &:last-child {
-                padding-right: map-get($spacings, 0);
+                padding-right: map-get($spacings, 1);
             }
         }
     }
