@@ -44,7 +44,8 @@
     }
 
     .brand-story .link-story {
-        display: inline-block;
+        display: flex;
+        align-items: center;
         color: map-get($primary, 400);
 
         &:hover, &:focus, &.active {

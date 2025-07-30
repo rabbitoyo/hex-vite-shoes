@@ -1,4 +1,12 @@
 // display
+.d-none {
+    display: none;
+}
+@include mq(md) {
+    .d-md-block {
+        display: block;
+    }
+}
 @include mq(sm) {
     .d-sm-none {
         display: none;

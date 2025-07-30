@@ -76,7 +76,7 @@
         max-width: 634px;
     }
 
-    .b1 {
+    .b1 .banner-body {
         &::before, &::after {
             content: "";
             display: block;
@@ -113,6 +113,19 @@
         }
     }
 
+    .b2 {
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+    }
+
     .swiper-pagination {
         bottom: map-get($spacings, 2);
 
@@ -146,7 +159,7 @@
             }
         }
 
-        .b1 {
+        .b1 .banner-body {
             &::before {
                 top: -1.6rem;
                 left: -1.4rem;

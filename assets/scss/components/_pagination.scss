@@ -23,6 +23,8 @@
     .page-link {
         display: block;
         @include space(padding, 2, 0);
+        width: 2.5rem;
+        height: 2.5rem;
         text-align: center;
 
         &:hover {

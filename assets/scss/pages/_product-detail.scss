@@ -90,6 +90,12 @@
     }
 }
 
+.product-sizes {
+    .p-sm {
+        color: map-get($danger, 300);
+    }
+}
+
 .product-sizes-list {
     padding-right: 1.875rem;
     display: flex;
@@ -133,12 +139,6 @@
 
     @include mq(xs) {
         padding-right: 0;
-    }
-}
-
-.product-sizes {
-    .p-sm {
-        color: map-get($danger, 300);
     }
 }
 
